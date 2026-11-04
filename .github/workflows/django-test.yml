@@ -61,6 +61,9 @@ jobs:
           docker compose logs
           exit 1
 
+      - name: Install Requirements
+        run: pip install -r requirements/dev.txt
+
       - name: Ruff lint
         run: ruff check .
 
