@@ -73,6 +73,12 @@ jobs:
       - name: Django tests
         run: docker compose exec -T web python manage.py test
 
+      - name: Django system check
+        run: docker compose exec -T web python manage.py check
+
+      - name: Check migrations
+        run: docker compose exec -T web python manage.py makemigrations --check --dry-run
+
       - name: Cleanup
         if: always()
         run: |
