@@ -1,0 +1,2 @@
+project_id = "YOUR_GOOGLE_CLOUD_PROJECT_ID"
+region     = "europe-central2"
